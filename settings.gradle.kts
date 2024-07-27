@@ -19,6 +19,12 @@ dependencyResolutionManagement {
     }
 }
 
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 rootProject.name = "MultiModuleTemplate"
 include(":app")
- 
+include(":home:presentation")
+include(":home:data")
+include(":core:presentation:designsystem")
+include(":home:domain")
