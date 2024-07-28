@@ -12,3 +12,11 @@ dependencies {
    compileOnly(libs.room.gradlePlugin)
 }
 
+gradlePlugin {
+   plugins {
+      register("androidApplication") {
+         id = "multi.module.android.application"
+         implementationClass = "AndroidApplicationConventionPlugin"
+      }
+   }
+}

@@ -1,4 +1,13 @@
 [versions]
+# Project versions
+projectApplicationId = "com.multi.module.template"
+projectVersionName = "1.0"
+projectVersionCode = "1"
+projectMinSdkVersion = "24"
+projectTargetSdkVersion = "34"
+projectCompileSdkVersion = "34"
+
+
 agp = "8.4.0"
 androidTools = "31.5.0"
 kotlin = "1.9.22"
@@ -14,6 +23,7 @@ composeBom = "2024.02.02"
 appcompat = "1.7.0"
 material = "1.12.0"
 jetbrainsKotlinJvm = "1.9.0"
+desugar_jdk_libs = "2.0.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,7 +42,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -47,3 +57,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+
+# Custom Convention Plugin
+multi-module-android-application = { id = "multi.module.android.application", version = "unspecified"}
